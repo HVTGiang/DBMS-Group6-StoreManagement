@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PrepareForFinal.BSLayer;
+using PrepareForFinal.DBLayer;
 
 namespace PrepareForFinal.UI
 {
@@ -30,6 +33,8 @@ namespace PrepareForFinal.UI
         {
             InitializeComponent();
             InputControlLoad();
+            txt_billID.Enabled = false;
+
         }
         private void InputControlLoad()
         {
@@ -183,6 +188,8 @@ namespace PrepareForFinal.UI
             txt_billInitalPay.Text = Math.Round(sum / 10000).ToString();
             EnabledInputControl();
             LoadProductList();
+
+            txt_billID.Text = myBill.autoGenerateID();
         }
 
         private void dtgv_billDetialList_CellClick(object sender, DataGridViewCellEventArgs e)

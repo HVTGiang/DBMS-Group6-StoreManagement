@@ -7,6 +7,7 @@ using PrepareForFinal.DBLayer;
 using System.Data.SqlClient;
 using System.Data;
 using System.Windows.Forms;
+using System.ComponentModel;
 
 namespace PrepareForFinal.BSLayer
 {
@@ -14,7 +15,7 @@ namespace PrepareForFinal.BSLayer
     {
         public MyData db = null;
         public SqlCommand cm = null;
-
+        SqlCommand cmd = new SqlCommand();
         public Bill()
         {
             db = new MyData();
@@ -262,17 +263,7 @@ namespace PrepareForFinal.BSLayer
         }
         public String autoGenerateID()
         {
-            string result = "";
-            db.openConnectionManager();
-            SqlCommand cmd = new SqlCommand("SELECT dbo.[uf_AutoGenerateID](@name)", db.getSqlConn);
-            cmd.Parameters.AddWithValue("@name", "Bill");
-            cmd.CommandType = CommandType.Text;
-            SqlDataReader dr = cmd.ExecuteReader();
-            dr.Read();
-            result = dr[0].ToString();
-            dr.Close();
-            db.closeConnectionManager();
-            return result;
+            return db.autoGenerateID("SELECT dbo.[uf_AutoGenerateID]('Bill')");
         }
     }
 }
