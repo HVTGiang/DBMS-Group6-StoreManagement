@@ -92,6 +92,10 @@ namespace PrepareForFinal.UI
                     MessageBox.Show("Thêm không được, lỗi: " + ex.Message);
                 }
             }
+            else
+            {
+                
+            }
 
             isAdd = false;
             ResetContent();
