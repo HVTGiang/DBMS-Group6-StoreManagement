@@ -37,22 +37,22 @@
             this.txt_productImport = new Guna.UI2.WinForms.Guna2TextBox();
             this.dgv_statistic = new Guna.UI2.WinForms.Guna2DataGridView();
             this.btn_productGroupButton = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.btn_cancel = new Guna.UI2.WinForms.Guna2Button();
+            this.txt_year = new System.Windows.Forms.TextBox();
+            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.cbMonth = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cbNameProduct = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.btn_ProStas = new Guna.UI2.WinForms.Guna2Button();
             this.btn_BillStatistic = new Guna.UI2.WinForms.Guna2Button();
             this.lb_prodcutImage = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lb_productImportDate = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lb_productvalidateDate = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lb_accountStatus = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cbNameProduct = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.cbMonth = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.txt_year = new System.Windows.Forms.TextBox();
-            this.btn_cancel = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_statistic)).BeginInit();
             this.btn_productGroupButton.SuspendLayout();
             this.SuspendLayout();
@@ -145,7 +145,7 @@
             this.dgv_statistic.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(136)))), ((int)(((byte)(145)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("DVN-Poppins ExtBd", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(239)))), ((int)(((byte)(214)))));
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -154,7 +154,7 @@
             this.dgv_statistic.ColumnHeadersHeight = 28;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("DVN-Poppins ExtBd", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(136)))), ((int)(((byte)(145)))));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
@@ -167,7 +167,7 @@
             this.dgv_statistic.ReadOnly = true;
             this.dgv_statistic.RowHeadersVisible = false;
             this.dgv_statistic.RowHeadersWidth = 51;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("DVN-Poppins", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgv_statistic.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_statistic.RowTemplate.Height = 24;
             this.dgv_statistic.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -183,14 +183,14 @@
             this.dgv_statistic.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_statistic.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(136)))), ((int)(((byte)(145)))));
             this.dgv_statistic.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgv_statistic.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("DVN-Poppins ExtBd", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_statistic.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgv_statistic.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(239)))), ((int)(((byte)(214)))));
             this.dgv_statistic.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgv_statistic.ThemeStyle.HeaderStyle.Height = 28;
             this.dgv_statistic.ThemeStyle.ReadOnly = true;
             this.dgv_statistic.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgv_statistic.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgv_statistic.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("DVN-Poppins ExtBd", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_statistic.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgv_statistic.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(136)))), ((int)(((byte)(145)))));
             this.dgv_statistic.ThemeStyle.RowsStyle.Height = 24;
             this.dgv_statistic.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
@@ -220,7 +220,7 @@
             this.btn_productGroupButton.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(239)))), ((int)(((byte)(214)))));
             this.btn_productGroupButton.CustomBorderThickness = new System.Windows.Forms.Padding(0);
             this.btn_productGroupButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(239)))), ((int)(((byte)(214)))));
-            this.btn_productGroupButton.Font = new System.Drawing.Font("DVN-Poppins ExtBd", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_productGroupButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_productGroupButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(136)))), ((int)(((byte)(145)))));
             this.btn_productGroupButton.Location = new System.Drawing.Point(3, 3);
             this.btn_productGroupButton.Name = "btn_productGroupButton";
@@ -230,132 +230,57 @@
             this.btn_productGroupButton.Text = "Thống kê";
             this.btn_productGroupButton.Click += new System.EventHandler(this.btn_productGroupButton_Click);
             // 
-            // btn_ProStas
+            // btn_cancel
             // 
-            this.btn_ProStas.BackColor = System.Drawing.Color.Transparent;
-            this.btn_ProStas.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(136)))), ((int)(((byte)(145)))));
-            this.btn_ProStas.BorderRadius = 5;
-            this.btn_ProStas.BorderThickness = 2;
-            this.btn_ProStas.CheckedState.Parent = this.btn_ProStas;
-            this.btn_ProStas.CustomImages.Parent = this.btn_ProStas;
-            this.btn_ProStas.FillColor = System.Drawing.Color.Transparent;
-            this.btn_ProStas.Font = new System.Drawing.Font("DVN-Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ProStas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(136)))), ((int)(((byte)(145)))));
-            this.btn_ProStas.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(94)))), ((int)(((byte)(111)))));
-            this.btn_ProStas.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(239)))), ((int)(((byte)(214)))));
-            this.btn_ProStas.HoverState.Parent = this.btn_ProStas;
-            this.btn_ProStas.Location = new System.Drawing.Point(774, 424);
-            this.btn_ProStas.Name = "btn_ProStas";
-            this.btn_ProStas.ShadowDecoration.Parent = this.btn_ProStas;
-            this.btn_ProStas.Size = new System.Drawing.Size(218, 36);
-            this.btn_ProStas.TabIndex = 33;
-            this.btn_ProStas.Text = "Thống kê sản phẩm";
-            this.btn_ProStas.Click += new System.EventHandler(this.btn_ProStas_Click);
+            this.btn_cancel.BackColor = System.Drawing.Color.Transparent;
+            this.btn_cancel.BorderRadius = 5;
+            this.btn_cancel.CheckedState.Parent = this.btn_cancel;
+            this.btn_cancel.CustomImages.Parent = this.btn_cancel;
+            this.btn_cancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(136)))), ((int)(((byte)(145)))));
+            this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(239)))), ((int)(((byte)(214)))));
+            this.btn_cancel.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(94)))), ((int)(((byte)(111)))));
+            this.btn_cancel.HoverState.Parent = this.btn_cancel;
+            this.btn_cancel.Location = new System.Drawing.Point(1057, 459);
+            this.btn_cancel.Name = "btn_cancel";
+            this.btn_cancel.ShadowDecoration.Parent = this.btn_cancel;
+            this.btn_cancel.Size = new System.Drawing.Size(75, 49);
+            this.btn_cancel.TabIndex = 41;
+            this.btn_cancel.Text = "Hủy";
             // 
-            // btn_BillStatistic
+            // txt_year
             // 
-            this.btn_BillStatistic.BackColor = System.Drawing.Color.Transparent;
-            this.btn_BillStatistic.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(136)))), ((int)(((byte)(145)))));
-            this.btn_BillStatistic.BorderRadius = 5;
-            this.btn_BillStatistic.BorderThickness = 2;
-            this.btn_BillStatistic.CheckedState.Parent = this.btn_BillStatistic;
-            this.btn_BillStatistic.CustomImages.Parent = this.btn_BillStatistic;
-            this.btn_BillStatistic.FillColor = System.Drawing.Color.Transparent;
-            this.btn_BillStatistic.Font = new System.Drawing.Font("DVN-Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_BillStatistic.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(136)))), ((int)(((byte)(145)))));
-            this.btn_BillStatistic.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(94)))), ((int)(((byte)(111)))));
-            this.btn_BillStatistic.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(239)))), ((int)(((byte)(214)))));
-            this.btn_BillStatistic.HoverState.Parent = this.btn_BillStatistic;
-            this.btn_BillStatistic.Location = new System.Drawing.Point(774, 93);
-            this.btn_BillStatistic.Name = "btn_BillStatistic";
-            this.btn_BillStatistic.ShadowDecoration.Parent = this.btn_BillStatistic;
-            this.btn_BillStatistic.Size = new System.Drawing.Size(218, 36);
-            this.btn_BillStatistic.TabIndex = 33;
-            this.btn_BillStatistic.Text = "Thống kê hóa đơn";
+            this.txt_year.Location = new System.Drawing.Point(1003, 366);
+            this.txt_year.Name = "txt_year";
+            this.txt_year.Size = new System.Drawing.Size(106, 28);
+            this.txt_year.TabIndex = 40;
             // 
-            // lb_prodcutImage
+            // guna2HtmlLabel4
             // 
-            this.lb_prodcutImage.AutoSize = false;
-            this.lb_prodcutImage.BackColor = System.Drawing.Color.Transparent;
-            this.lb_prodcutImage.Font = new System.Drawing.Font("DVN-Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_prodcutImage.Location = new System.Drawing.Point(733, 39);
-            this.lb_prodcutImage.Name = "lb_prodcutImage";
-            this.lb_prodcutImage.Size = new System.Drawing.Size(232, 28);
-            this.lb_prodcutImage.TabIndex = 9;
-            this.lb_prodcutImage.Text = "Hình ảnh (nếu có)";
+            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(1040, 334);
+            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(32, 18);
+            this.guna2HtmlLabel4.TabIndex = 39;
+            this.guna2HtmlLabel4.Text = "Năm";
             // 
-            // lb_productImportDate
+            // guna2HtmlLabel3
             // 
-            this.lb_productImportDate.AutoSize = false;
-            this.lb_productImportDate.BackColor = System.Drawing.Color.Transparent;
-            this.lb_productImportDate.Font = new System.Drawing.Font("DVN-Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_productImportDate.Location = new System.Drawing.Point(944, 158);
-            this.lb_productImportDate.Name = "lb_productImportDate";
-            this.lb_productImportDate.Size = new System.Drawing.Size(128, 28);
-            this.lb_productImportDate.TabIndex = 9;
-            this.lb_productImportDate.Text = "Ngày nhập";
+            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(905, 334);
+            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(42, 18);
+            this.guna2HtmlLabel3.TabIndex = 38;
+            this.guna2HtmlLabel3.Text = "Tháng";
             // 
-            // lb_productvalidateDate
+            // guna2HtmlLabel1
             // 
-            this.lb_productvalidateDate.AutoSize = false;
-            this.lb_productvalidateDate.BackColor = System.Drawing.Color.Transparent;
-            this.lb_productvalidateDate.Font = new System.Drawing.Font("DVN-Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_productvalidateDate.Location = new System.Drawing.Point(944, 241);
-            this.lb_productvalidateDate.Name = "lb_productvalidateDate";
-            this.lb_productvalidateDate.Size = new System.Drawing.Size(146, 28);
-            this.lb_productvalidateDate.TabIndex = 9;
-            this.lb_productvalidateDate.Text = "Ngày hết hạn";
-            // 
-            // lb_accountStatus
-            // 
-            this.lb_accountStatus.AutoSize = false;
-            this.lb_accountStatus.BackColor = System.Drawing.Color.Transparent;
-            this.lb_accountStatus.Font = new System.Drawing.Font("DVN-Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_accountStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(136)))), ((int)(((byte)(145)))));
-            this.lb_accountStatus.Location = new System.Drawing.Point(944, 39);
-            this.lb_accountStatus.Name = "lb_accountStatus";
-            this.lb_accountStatus.Size = new System.Drawing.Size(157, 28);
-            this.lb_accountStatus.TabIndex = 31;
-            this.lb_accountStatus.Text = "Loại sản phẩm";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(239)))), ((int)(((byte)(214)))));
-            this.label1.Location = new System.Drawing.Point(705, 285);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(386, 31);
-            this.label1.TabIndex = 34;
-            this.label1.Text = "Thống kê sản phẩm bán được theo tháng";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(239)))), ((int)(((byte)(214)))));
-            this.label2.Location = new System.Drawing.Point(705, 46);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(363, 31);
-            this.label2.TabIndex = 34;
-            this.label2.Text = "Thống kế số lượng hóa đơn khách mua";
-            // 
-            // cbNameProduct
-            // 
-            this.cbNameProduct.BackColor = System.Drawing.Color.Transparent;
-            this.cbNameProduct.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbNameProduct.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbNameProduct.FocusedColor = System.Drawing.Color.Empty;
-            this.cbNameProduct.FocusedState.Parent = this.cbNameProduct;
-            this.cbNameProduct.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbNameProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbNameProduct.FormattingEnabled = true;
-            this.cbNameProduct.HoverState.Parent = this.cbNameProduct;
-            this.cbNameProduct.ItemHeight = 30;
-            this.cbNameProduct.ItemsAppearance.Parent = this.cbNameProduct;
-            this.cbNameProduct.Location = new System.Drawing.Point(685, 365);
-            this.cbNameProduct.Name = "cbNameProduct";
-            this.cbNameProduct.ShadowDecoration.Parent = this.cbNameProduct;
-            this.cbNameProduct.Size = new System.Drawing.Size(180, 36);
-            this.cbNameProduct.TabIndex = 35;
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(716, 334);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(89, 18);
+            this.guna2HtmlLabel1.TabIndex = 36;
+            this.guna2HtmlLabel1.Text = "Tên sản phẩm";
             // 
             // cbMonth
             // 
@@ -389,14 +314,24 @@
             this.cbMonth.Size = new System.Drawing.Size(103, 36);
             this.cbMonth.TabIndex = 35;
             // 
-            // guna2HtmlLabel1
+            // cbNameProduct
             // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(716, 334);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(98, 25);
-            this.guna2HtmlLabel1.TabIndex = 36;
-            this.guna2HtmlLabel1.Text = "Tên sản phẩm";
+            this.cbNameProduct.BackColor = System.Drawing.Color.Transparent;
+            this.cbNameProduct.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbNameProduct.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbNameProduct.FocusedColor = System.Drawing.Color.Empty;
+            this.cbNameProduct.FocusedState.Parent = this.cbNameProduct;
+            this.cbNameProduct.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbNameProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbNameProduct.FormattingEnabled = true;
+            this.cbNameProduct.HoverState.Parent = this.cbNameProduct;
+            this.cbNameProduct.ItemHeight = 30;
+            this.cbNameProduct.ItemsAppearance.Parent = this.cbNameProduct;
+            this.cbNameProduct.Location = new System.Drawing.Point(685, 365);
+            this.cbNameProduct.Name = "cbNameProduct";
+            this.cbNameProduct.ShadowDecoration.Parent = this.cbNameProduct;
+            this.cbNameProduct.Size = new System.Drawing.Size(180, 36);
+            this.cbNameProduct.TabIndex = 35;
             // 
             // label3
             // 
@@ -404,52 +339,118 @@
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(239)))), ((int)(((byte)(214)))));
             this.label3.Location = new System.Drawing.Point(705, 161);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(299, 31);
+            this.label3.Size = new System.Drawing.Size(290, 22);
             this.label3.TabIndex = 34;
             this.label3.Text = "Thống kê doanh thu theo tháng";
             // 
-            // guna2HtmlLabel3
+            // label2
             // 
-            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(905, 334);
-            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(47, 25);
-            this.guna2HtmlLabel3.TabIndex = 38;
-            this.guna2HtmlLabel3.Text = "Tháng";
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(239)))), ((int)(((byte)(214)))));
+            this.label2.Location = new System.Drawing.Point(705, 46);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(356, 22);
+            this.label2.TabIndex = 34;
+            this.label2.Text = "Thống kế số lượng hóa đơn khách mua";
             // 
-            // guna2HtmlLabel4
+            // label1
             // 
-            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(1040, 334);
-            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(36, 25);
-            this.guna2HtmlLabel4.TabIndex = 39;
-            this.guna2HtmlLabel4.Text = "Năm";
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(239)))), ((int)(((byte)(214)))));
+            this.label1.Location = new System.Drawing.Point(705, 285);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(375, 22);
+            this.label1.TabIndex = 34;
+            this.label1.Text = "Thống kê sản phẩm bán được theo tháng";
             // 
-            // txt_year
+            // btn_ProStas
             // 
-            this.txt_year.Location = new System.Drawing.Point(1003, 366);
-            this.txt_year.Name = "txt_year";
-            this.txt_year.Size = new System.Drawing.Size(106, 34);
-            this.txt_year.TabIndex = 40;
+            this.btn_ProStas.BackColor = System.Drawing.Color.Transparent;
+            this.btn_ProStas.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(136)))), ((int)(((byte)(145)))));
+            this.btn_ProStas.BorderRadius = 5;
+            this.btn_ProStas.BorderThickness = 2;
+            this.btn_ProStas.CheckedState.Parent = this.btn_ProStas;
+            this.btn_ProStas.CustomImages.Parent = this.btn_ProStas;
+            this.btn_ProStas.FillColor = System.Drawing.Color.Transparent;
+            this.btn_ProStas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ProStas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(136)))), ((int)(((byte)(145)))));
+            this.btn_ProStas.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(94)))), ((int)(((byte)(111)))));
+            this.btn_ProStas.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(239)))), ((int)(((byte)(214)))));
+            this.btn_ProStas.HoverState.Parent = this.btn_ProStas;
+            this.btn_ProStas.Location = new System.Drawing.Point(774, 424);
+            this.btn_ProStas.Name = "btn_ProStas";
+            this.btn_ProStas.ShadowDecoration.Parent = this.btn_ProStas;
+            this.btn_ProStas.Size = new System.Drawing.Size(218, 36);
+            this.btn_ProStas.TabIndex = 33;
+            this.btn_ProStas.Text = "Thống kê sản phẩm";
+            this.btn_ProStas.Click += new System.EventHandler(this.btn_ProStas_Click);
             // 
-            // btn_cancel
+            // btn_BillStatistic
             // 
-            this.btn_cancel.BackColor = System.Drawing.Color.Transparent;
-            this.btn_cancel.BorderRadius = 5;
-            this.btn_cancel.CheckedState.Parent = this.btn_cancel;
-            this.btn_cancel.CustomImages.Parent = this.btn_cancel;
-            this.btn_cancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(136)))), ((int)(((byte)(145)))));
-            this.btn_cancel.Font = new System.Drawing.Font("DVN-Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(239)))), ((int)(((byte)(214)))));
-            this.btn_cancel.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(94)))), ((int)(((byte)(111)))));
-            this.btn_cancel.HoverState.Parent = this.btn_cancel;
-            this.btn_cancel.Location = new System.Drawing.Point(1057, 459);
-            this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.ShadowDecoration.Parent = this.btn_cancel;
-            this.btn_cancel.Size = new System.Drawing.Size(75, 49);
-            this.btn_cancel.TabIndex = 41;
-            this.btn_cancel.Text = "Hủy";
+            this.btn_BillStatistic.BackColor = System.Drawing.Color.Transparent;
+            this.btn_BillStatistic.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(136)))), ((int)(((byte)(145)))));
+            this.btn_BillStatistic.BorderRadius = 5;
+            this.btn_BillStatistic.BorderThickness = 2;
+            this.btn_BillStatistic.CheckedState.Parent = this.btn_BillStatistic;
+            this.btn_BillStatistic.CustomImages.Parent = this.btn_BillStatistic;
+            this.btn_BillStatistic.FillColor = System.Drawing.Color.Transparent;
+            this.btn_BillStatistic.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_BillStatistic.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(136)))), ((int)(((byte)(145)))));
+            this.btn_BillStatistic.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(94)))), ((int)(((byte)(111)))));
+            this.btn_BillStatistic.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(239)))), ((int)(((byte)(214)))));
+            this.btn_BillStatistic.HoverState.Parent = this.btn_BillStatistic;
+            this.btn_BillStatistic.Location = new System.Drawing.Point(774, 93);
+            this.btn_BillStatistic.Name = "btn_BillStatistic";
+            this.btn_BillStatistic.ShadowDecoration.Parent = this.btn_BillStatistic;
+            this.btn_BillStatistic.Size = new System.Drawing.Size(218, 36);
+            this.btn_BillStatistic.TabIndex = 33;
+            this.btn_BillStatistic.Text = "Thống kê hóa đơn";
+            this.btn_BillStatistic.Click += new System.EventHandler(this.btn_BillStatistic_Click);
+            // 
+            // lb_prodcutImage
+            // 
+            this.lb_prodcutImage.AutoSize = false;
+            this.lb_prodcutImage.BackColor = System.Drawing.Color.Transparent;
+            this.lb_prodcutImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_prodcutImage.Location = new System.Drawing.Point(733, 39);
+            this.lb_prodcutImage.Name = "lb_prodcutImage";
+            this.lb_prodcutImage.Size = new System.Drawing.Size(232, 28);
+            this.lb_prodcutImage.TabIndex = 9;
+            this.lb_prodcutImage.Text = "Hình ảnh (nếu có)";
+            // 
+            // lb_productImportDate
+            // 
+            this.lb_productImportDate.AutoSize = false;
+            this.lb_productImportDate.BackColor = System.Drawing.Color.Transparent;
+            this.lb_productImportDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_productImportDate.Location = new System.Drawing.Point(944, 158);
+            this.lb_productImportDate.Name = "lb_productImportDate";
+            this.lb_productImportDate.Size = new System.Drawing.Size(128, 28);
+            this.lb_productImportDate.TabIndex = 9;
+            this.lb_productImportDate.Text = "Ngày nhập";
+            // 
+            // lb_productvalidateDate
+            // 
+            this.lb_productvalidateDate.AutoSize = false;
+            this.lb_productvalidateDate.BackColor = System.Drawing.Color.Transparent;
+            this.lb_productvalidateDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_productvalidateDate.Location = new System.Drawing.Point(944, 241);
+            this.lb_productvalidateDate.Name = "lb_productvalidateDate";
+            this.lb_productvalidateDate.Size = new System.Drawing.Size(146, 28);
+            this.lb_productvalidateDate.TabIndex = 9;
+            this.lb_productvalidateDate.Text = "Ngày hết hạn";
+            // 
+            // lb_accountStatus
+            // 
+            this.lb_accountStatus.AutoSize = false;
+            this.lb_accountStatus.BackColor = System.Drawing.Color.Transparent;
+            this.lb_accountStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_accountStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(136)))), ((int)(((byte)(145)))));
+            this.lb_accountStatus.Location = new System.Drawing.Point(944, 39);
+            this.lb_accountStatus.Name = "lb_accountStatus";
+            this.lb_accountStatus.Size = new System.Drawing.Size(157, 28);
+            this.lb_accountStatus.TabIndex = 31;
+            this.lb_accountStatus.Text = "Loại sản phẩm";
             // 
             // us_staticUI
             // 

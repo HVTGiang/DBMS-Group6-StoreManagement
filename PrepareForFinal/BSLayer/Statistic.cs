@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -72,6 +73,23 @@ namespace PrepareForFinal.BSLayer
             return DR[0].ToString();
         }
 
-
+        public DataSet getBillOfCustomer()
+        {
+            cmd = new SqlCommand("SELECT * FROM v_BillOfCustomer", db.getSqlConn);
+            DataSet ds = new DataSet();
+            SqlDataAdapter dataAdapter;
+            try
+            {
+                db.openConnectionManager();
+                dataAdapter = new SqlDataAdapter(cmd);
+                dataAdapter.Fill(ds);
+            }
+            catch (Exception ex)
+            {
+                ds = null;
+                MessageBox.Show(ex.Message);
+            }
+            return ds;
+        }
     }
 }

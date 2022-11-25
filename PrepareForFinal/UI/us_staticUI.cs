@@ -60,5 +60,22 @@ namespace PrepareForFinal.UI
             
           
         }
+
+        private void btn_BillStatistic_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dtStatis = new DataTable();
+                DataSet ds = new DataSet();
+                ds = dbStatis.getBillOfCustomer();
+                dtStatis = ds.Tables[0];
+                dgv_statistic.DataSource = dtStatis;
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
