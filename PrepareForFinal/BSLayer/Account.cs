@@ -103,6 +103,35 @@ namespace PrepareForFinal.BSLayer
             }
         }
 
+        public bool updateAccount(string id, string name, string gender, DateTime date, string address, string phone,
+            int position, DateTime hireDate, float salary)
+        {
+
+            cmd = new SqlCommand("EXEC usp_UpdateEmployee @id, @name, @gender, @date, @address, @phone, @position, @hireDate,@salary", db.getSqlConn);
+            cmd.Parameters.AddWithValue("@id", id);
+            cmd.Parameters.AddWithValue("@name", name);
+            cmd.Parameters.AddWithValue("@gender", gender);
+            cmd.Parameters.AddWithValue("@date", date);
+            cmd.Parameters.AddWithValue("@address", address);
+            cmd.Parameters.AddWithValue("@phone", phone);
+            cmd.Parameters.AddWithValue("@position", position);
+            cmd.Parameters.AddWithValue("@hireDate", hireDate);
+            cmd.Parameters.AddWithValue("@salary", salary);
+
+            db.openConnectionManager();
+            if ((cmd.ExecuteNonQuery() == 1))
+            {
+                db.closeConnectionManager();
+                return true;
+            }
+            else
+            {
+                db.closeConnectionManager();
+                return false;
+            }
+
+        }
+
 
     }
 }

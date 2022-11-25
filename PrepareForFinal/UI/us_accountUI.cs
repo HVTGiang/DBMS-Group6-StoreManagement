@@ -17,6 +17,9 @@ namespace PrepareForFinal.UI
         DataSet myAccountDataSet;
         bool isAdd = false;
 
+        Account dbAccount = new Account();
+
+
         public us_accountUI()
         {
             InitializeComponent();
@@ -70,17 +73,8 @@ namespace PrepareForFinal.UI
                     Employee employee = new Employee();
                     if (account.addAccount(txt_accountUsername.Text.Trim(), txt_accountPassword.Text.Trim(), employee.getEmployeeID(cb_accountEName.Text)) == true)
                     {
-                        MessageBox.Show("Thêm tài khoản thành công");
-                        btn_accountAdd.Enabled = true;
-                        btn_accountUpdate.Enabled = true;
-                        btn_accountSave.Enabled = false;
-                        btn_accountCancel.Enabled = false;
-                        txt_accountUsername.Enabled = true;
-                        txt_accountUsername.Enabled = false;
-                        txt_accountPassword.Enabled = false;
-                        txt_accountEID.Enabled = false;
-                        cb_accountEName.Enabled = false;
-                        cb_accountEName.Items.Clear();
+                        dbAccount.addAccount(txt_accountUsername.Text.Trim(), txt_accountPassword.Text.Trim(), txt_accountEID.Text.Trim());
+                        
                     }
                     else
                     {
@@ -92,10 +86,16 @@ namespace PrepareForFinal.UI
                     MessageBox.Show("Thêm không được, lỗi: " + ex.Message);
                 }
             }
-            else
-            {
-                
-            }
+            MessageBox.Show("Thêm tài khoản thành công");
+            btn_accountAdd.Enabled = true;
+            btn_accountUpdate.Enabled = true;
+            btn_accountSave.Enabled = false;
+            btn_accountCancel.Enabled = false;
+            txt_accountUsername.Enabled = true;
+            txt_accountUsername.Enabled = false;
+            txt_accountPassword.Enabled = false;
+            txt_accountEID.Enabled = false;
+            cb_accountEName.Enabled = false;
 
             isAdd = false;
             ResetContent();
@@ -163,6 +163,10 @@ namespace PrepareForFinal.UI
             {
                 MessageBox.Show("Lỗi", "Không hiển thị được thông tin, Lỗi: " + ex.Message);
             }
+
+            cb_accountEName.Items.Clear();
+            Bill myBill = new Bill();
+            myBill.getEmployeeName(cb_accountEName);
         }
 
         private void dtgv_accountList_CellClick(object sender, DataGridViewCellEventArgs e)

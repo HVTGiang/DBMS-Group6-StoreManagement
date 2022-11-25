@@ -221,6 +221,7 @@
     <Compile Include="BSLayer\Detail.cs" />
     <Compile Include="BSLayer\Employee.cs" />
     <Compile Include="BSLayer\Product.cs" />
+    <Compile Include="BSLayer\Statistic.cs" />
     <Compile Include="BSLayer\Supply.cs" />
     <Compile Include="BSLayer\TemDetail.cs" />
     <Compile Include="BSLayer\TypeProduct.cs" />
