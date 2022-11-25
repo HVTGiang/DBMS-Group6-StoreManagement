@@ -35,7 +35,7 @@
             this.txt_pname = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_pfind = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_productImport = new Guna.UI2.WinForms.Guna2TextBox();
-            this.dgv_product = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.dgv_statistic = new Guna.UI2.WinForms.Guna2DataGridView();
             this.btn_productGroupButton = new Guna.UI2.WinForms.Guna2GroupBox();
             this.btn_ProStas = new Guna.UI2.WinForms.Guna2Button();
             this.btn_BillStatistic = new Guna.UI2.WinForms.Guna2Button();
@@ -48,9 +48,12 @@
             this.cbNameProduct = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cbMonth = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_product)).BeginInit();
+            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txt_year = new System.Windows.Forms.TextBox();
+            this.btn_cancel = new Guna.UI2.WinForms.Guna2Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_statistic)).BeginInit();
             this.btn_productGroupButton.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -130,16 +133,16 @@
             this.txt_productImport.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txt_productImport.TabIndex = 1;
             // 
-            // dgv_product
+            // dgv_statistic
             // 
-            this.dgv_product.AllowUserToAddRows = false;
+            this.dgv_statistic.AllowUserToAddRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgv_product.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgv_product.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_product.BackgroundColor = System.Drawing.Color.White;
-            this.dgv_product.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgv_product.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgv_product.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgv_statistic.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_statistic.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_statistic.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_statistic.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_statistic.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgv_statistic.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(136)))), ((int)(((byte)(145)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("DVN-Poppins ExtBd", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -147,8 +150,8 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_product.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv_product.ColumnHeadersHeight = 28;
+            this.dgv_statistic.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_statistic.ColumnHeadersHeight = 28;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("DVN-Poppins ExtBd", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -156,49 +159,52 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_product.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgv_product.EnableHeadersVisualStyles = false;
-            this.dgv_product.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_product.Location = new System.Drawing.Point(46, 65);
-            this.dgv_product.Name = "dgv_product";
-            this.dgv_product.ReadOnly = true;
-            this.dgv_product.RowHeadersVisible = false;
-            this.dgv_product.RowHeadersWidth = 51;
+            this.dgv_statistic.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgv_statistic.EnableHeadersVisualStyles = false;
+            this.dgv_statistic.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgv_statistic.Location = new System.Drawing.Point(46, 65);
+            this.dgv_statistic.Name = "dgv_statistic";
+            this.dgv_statistic.ReadOnly = true;
+            this.dgv_statistic.RowHeadersVisible = false;
+            this.dgv_statistic.RowHeadersWidth = 51;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("DVN-Poppins", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgv_product.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgv_product.RowTemplate.Height = 24;
-            this.dgv_product.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_product.Size = new System.Drawing.Size(612, 411);
-            this.dgv_product.TabIndex = 4;
-            this.dgv_product.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
-            this.dgv_product.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgv_product.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dgv_product.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dgv_product.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dgv_product.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgv_product.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dgv_product.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_product.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(136)))), ((int)(((byte)(145)))));
-            this.dgv_product.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgv_product.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("DVN-Poppins ExtBd", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgv_product.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(239)))), ((int)(((byte)(214)))));
-            this.dgv_product.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgv_product.ThemeStyle.HeaderStyle.Height = 28;
-            this.dgv_product.ThemeStyle.ReadOnly = true;
-            this.dgv_product.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgv_product.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgv_product.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("DVN-Poppins ExtBd", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgv_product.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(136)))), ((int)(((byte)(145)))));
-            this.dgv_product.ThemeStyle.RowsStyle.Height = 24;
-            this.dgv_product.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_product.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgv_statistic.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgv_statistic.RowTemplate.Height = 24;
+            this.dgv_statistic.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_statistic.Size = new System.Drawing.Size(612, 411);
+            this.dgv_statistic.TabIndex = 4;
+            this.dgv_statistic.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
+            this.dgv_statistic.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgv_statistic.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgv_statistic.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgv_statistic.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgv_statistic.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgv_statistic.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dgv_statistic.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgv_statistic.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(136)))), ((int)(((byte)(145)))));
+            this.dgv_statistic.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgv_statistic.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("DVN-Poppins ExtBd", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_statistic.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(239)))), ((int)(((byte)(214)))));
+            this.dgv_statistic.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgv_statistic.ThemeStyle.HeaderStyle.Height = 28;
+            this.dgv_statistic.ThemeStyle.ReadOnly = true;
+            this.dgv_statistic.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgv_statistic.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgv_statistic.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("DVN-Poppins ExtBd", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_statistic.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(136)))), ((int)(((byte)(145)))));
+            this.dgv_statistic.ThemeStyle.RowsStyle.Height = 24;
+            this.dgv_statistic.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgv_statistic.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
             // btn_productGroupButton
             // 
             this.btn_productGroupButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(136)))), ((int)(((byte)(145)))));
             this.btn_productGroupButton.BorderRadius = 5;
             this.btn_productGroupButton.BorderThickness = 2;
-            this.btn_productGroupButton.Controls.Add(this.guna2HtmlLabel2);
+            this.btn_productGroupButton.Controls.Add(this.btn_cancel);
+            this.btn_productGroupButton.Controls.Add(this.txt_year);
+            this.btn_productGroupButton.Controls.Add(this.guna2HtmlLabel4);
+            this.btn_productGroupButton.Controls.Add(this.guna2HtmlLabel3);
             this.btn_productGroupButton.Controls.Add(this.guna2HtmlLabel1);
             this.btn_productGroupButton.Controls.Add(this.cbMonth);
             this.btn_productGroupButton.Controls.Add(this.cbNameProduct);
@@ -207,7 +213,7 @@
             this.btn_productGroupButton.Controls.Add(this.label1);
             this.btn_productGroupButton.Controls.Add(this.btn_ProStas);
             this.btn_productGroupButton.Controls.Add(this.btn_BillStatistic);
-            this.btn_productGroupButton.Controls.Add(this.dgv_product);
+            this.btn_productGroupButton.Controls.Add(this.dgv_statistic);
             this.btn_productGroupButton.Controls.Add(this.txt_productImport);
             this.btn_productGroupButton.Controls.Add(this.txt_pfind);
             this.btn_productGroupButton.Controls.Add(this.txt_pname);
@@ -222,6 +228,7 @@
             this.btn_productGroupButton.Size = new System.Drawing.Size(1171, 525);
             this.btn_productGroupButton.TabIndex = 11;
             this.btn_productGroupButton.Text = "Thống kê";
+            this.btn_productGroupButton.Click += new System.EventHandler(this.btn_productGroupButton_Click);
             // 
             // btn_ProStas
             // 
@@ -237,12 +244,13 @@
             this.btn_ProStas.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(94)))), ((int)(((byte)(111)))));
             this.btn_ProStas.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(239)))), ((int)(((byte)(214)))));
             this.btn_ProStas.HoverState.Parent = this.btn_ProStas;
-            this.btn_ProStas.Location = new System.Drawing.Point(824, 455);
+            this.btn_ProStas.Location = new System.Drawing.Point(774, 424);
             this.btn_ProStas.Name = "btn_ProStas";
             this.btn_ProStas.ShadowDecoration.Parent = this.btn_ProStas;
             this.btn_ProStas.Size = new System.Drawing.Size(218, 36);
             this.btn_ProStas.TabIndex = 33;
             this.btn_ProStas.Text = "Thống kê sản phẩm";
+            this.btn_ProStas.Click += new System.EventHandler(this.btn_ProStas_Click);
             // 
             // btn_BillStatistic
             // 
@@ -258,7 +266,7 @@
             this.btn_BillStatistic.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(94)))), ((int)(((byte)(111)))));
             this.btn_BillStatistic.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(239)))), ((int)(((byte)(214)))));
             this.btn_BillStatistic.HoverState.Parent = this.btn_BillStatistic;
-            this.btn_BillStatistic.Location = new System.Drawing.Point(810, 93);
+            this.btn_BillStatistic.Location = new System.Drawing.Point(774, 93);
             this.btn_BillStatistic.Name = "btn_BillStatistic";
             this.btn_BillStatistic.ShadowDecoration.Parent = this.btn_BillStatistic;
             this.btn_BillStatistic.Size = new System.Drawing.Size(218, 36);
@@ -314,7 +322,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(239)))), ((int)(((byte)(214)))));
-            this.label1.Location = new System.Drawing.Point(738, 316);
+            this.label1.Location = new System.Drawing.Point(705, 285);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(386, 31);
             this.label1.TabIndex = 34;
@@ -324,7 +332,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(239)))), ((int)(((byte)(214)))));
-            this.label2.Location = new System.Drawing.Point(738, 46);
+            this.label2.Location = new System.Drawing.Point(705, 46);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(363, 31);
             this.label2.TabIndex = 34;
@@ -343,7 +351,7 @@
             this.cbNameProduct.HoverState.Parent = this.cbNameProduct;
             this.cbNameProduct.ItemHeight = 30;
             this.cbNameProduct.ItemsAppearance.Parent = this.cbNameProduct;
-            this.cbNameProduct.Location = new System.Drawing.Point(727, 396);
+            this.cbNameProduct.Location = new System.Drawing.Point(685, 365);
             this.cbNameProduct.Name = "cbNameProduct";
             this.cbNameProduct.ShadowDecoration.Parent = this.cbNameProduct;
             this.cbNameProduct.Size = new System.Drawing.Size(180, 36);
@@ -361,40 +369,87 @@
             this.cbMonth.FormattingEnabled = true;
             this.cbMonth.HoverState.Parent = this.cbMonth;
             this.cbMonth.ItemHeight = 30;
+            this.cbMonth.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12"});
             this.cbMonth.ItemsAppearance.Parent = this.cbMonth;
-            this.cbMonth.Location = new System.Drawing.Point(960, 396);
+            this.cbMonth.Location = new System.Drawing.Point(882, 365);
             this.cbMonth.Name = "cbMonth";
             this.cbMonth.ShadowDecoration.Parent = this.cbMonth;
-            this.cbMonth.Size = new System.Drawing.Size(174, 36);
+            this.cbMonth.Size = new System.Drawing.Size(103, 36);
             this.cbMonth.TabIndex = 35;
             // 
             // guna2HtmlLabel1
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(758, 365);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(716, 334);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(98, 25);
             this.guna2HtmlLabel1.TabIndex = 36;
             this.guna2HtmlLabel1.Text = "Tên sản phẩm";
             // 
-            // guna2HtmlLabel2
-            // 
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(1021, 365);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(47, 25);
-            this.guna2HtmlLabel2.TabIndex = 37;
-            this.guna2HtmlLabel2.Text = "Tháng";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(239)))), ((int)(((byte)(214)))));
-            this.label3.Location = new System.Drawing.Point(772, 188);
+            this.label3.Location = new System.Drawing.Point(705, 161);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(299, 31);
             this.label3.TabIndex = 34;
             this.label3.Text = "Thống kê doanh thu theo tháng";
+            // 
+            // guna2HtmlLabel3
+            // 
+            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(905, 334);
+            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(47, 25);
+            this.guna2HtmlLabel3.TabIndex = 38;
+            this.guna2HtmlLabel3.Text = "Tháng";
+            // 
+            // guna2HtmlLabel4
+            // 
+            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(1040, 334);
+            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(36, 25);
+            this.guna2HtmlLabel4.TabIndex = 39;
+            this.guna2HtmlLabel4.Text = "Năm";
+            // 
+            // txt_year
+            // 
+            this.txt_year.Location = new System.Drawing.Point(1003, 366);
+            this.txt_year.Name = "txt_year";
+            this.txt_year.Size = new System.Drawing.Size(106, 34);
+            this.txt_year.TabIndex = 40;
+            // 
+            // btn_cancel
+            // 
+            this.btn_cancel.BackColor = System.Drawing.Color.Transparent;
+            this.btn_cancel.BorderRadius = 5;
+            this.btn_cancel.CheckedState.Parent = this.btn_cancel;
+            this.btn_cancel.CustomImages.Parent = this.btn_cancel;
+            this.btn_cancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(136)))), ((int)(((byte)(145)))));
+            this.btn_cancel.Font = new System.Drawing.Font("DVN-Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(239)))), ((int)(((byte)(214)))));
+            this.btn_cancel.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(94)))), ((int)(((byte)(111)))));
+            this.btn_cancel.HoverState.Parent = this.btn_cancel;
+            this.btn_cancel.Location = new System.Drawing.Point(1057, 459);
+            this.btn_cancel.Name = "btn_cancel";
+            this.btn_cancel.ShadowDecoration.Parent = this.btn_cancel;
+            this.btn_cancel.Size = new System.Drawing.Size(75, 49);
+            this.btn_cancel.TabIndex = 41;
+            this.btn_cancel.Text = "Hủy";
             // 
             // us_staticUI
             // 
@@ -403,7 +458,7 @@
             this.Controls.Add(this.btn_productGroupButton);
             this.Name = "us_staticUI";
             this.Size = new System.Drawing.Size(1177, 531);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_product)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_statistic)).EndInit();
             this.btn_productGroupButton.ResumeLayout(false);
             this.btn_productGroupButton.PerformLayout();
             this.ResumeLayout(false);
@@ -415,7 +470,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txt_pname;
         private Guna.UI2.WinForms.Guna2TextBox txt_pfind;
         private Guna.UI2.WinForms.Guna2TextBox txt_productImport;
-        private Guna.UI2.WinForms.Guna2DataGridView dgv_product;
+        private Guna.UI2.WinForms.Guna2DataGridView dgv_statistic;
         private Guna.UI2.WinForms.Guna2GroupBox btn_productGroupButton;
         private Guna.UI2.WinForms.Guna2Button btn_ProStas;
         private Guna.UI2.WinForms.Guna2Button btn_BillStatistic;
@@ -423,12 +478,15 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lb_productImportDate;
         private Guna.UI2.WinForms.Guna2HtmlLabel lb_productvalidateDate;
         private Guna.UI2.WinForms.Guna2HtmlLabel lb_accountStatus;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2ComboBox cbMonth;
         private Guna.UI2.WinForms.Guna2ComboBox cbNameProduct;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txt_year;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
+        private Guna.UI2.WinForms.Guna2Button btn_cancel;
     }
 }

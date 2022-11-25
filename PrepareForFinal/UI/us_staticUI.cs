@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PrepareForFinal.BSLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,49 @@ namespace PrepareForFinal.UI
         public us_staticUI()
         {
             InitializeComponent();
+            loadData();
+        }
+
+        DataTable dtStatis = null;
+        Statistic dbStatis = new Statistic();
+
+        public void loadData()
+        {
+            dbStatis.getProduct(cbNameProduct);
+            
+            
+        }
+
+
+
+        private void btn_productGroupButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_ProStas_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dtStatis = new DataTable();
+                DataSet myAccountDataSet = new DataSet();
+                // Lấy data đưa vào dataset
+                myAccountDataSet = dbStatis.GetProductMonth(dbStatis.getProductID(cbNameProduct), Convert.ToInt32(cbMonth.Text), Convert.ToInt32(txt_year.Text.Trim()));
+                // Đưa dữ liệu từ dataset vào table
+                dtStatis = myAccountDataSet.Tables[0];
+                // Đổ data vào datagridview
+                dgv_statistic.DataSource = dtStatis;
+                // Tùy chỉnh giao diện cho cái list
+                dgv_statistic.AllowUserToAddRows = false;
+                dgv_statistic.Columns[0].HeaderText = "Số lượng mua";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            
+          
         }
     }
 }
