@@ -25,22 +25,22 @@ namespace PrepareForFinal.BSLayer
             return db.ExecuteQueryDataSet("Select * from Customer where c_status = 0", CommandType.Text);
         }
 
-        public bool addCustomer(string cid, string name, int gender, DateTime birth, 
+        public bool addCustomer(string cid, string name, string gender, DateTime birth, 
             string address, string phone, int point)
         {
-            string queryString = "EXEC usp_AddCustomer @cid, @name, @gender, @birth, @address, @phone, @point";
+            string queryString = "EXEC usp_AddCustomer @id, @name, @gender, @birth, @address, @phone, @point";
 
             cmd = new SqlCommand(queryString, db.getSqlConn);
-            cmd.Parameters.AddWithValue("@cid", cid);
+            cmd.Parameters.AddWithValue("@id", cid);
             cmd.Parameters.AddWithValue("@name", name);
             cmd.Parameters.AddWithValue("@gender", gender);
             cmd.Parameters.AddWithValue("@birth", birth);
             cmd.Parameters.AddWithValue("@address", address);
             cmd.Parameters.AddWithValue("@phone", phone);
             cmd.Parameters.AddWithValue("@point", point);
-
+            db=new MyData();
             db.openConnectionManager();
-            if((cmd.ExecuteNonQuery() == 1))
+            if(cmd.ExecuteNonQuery() == 1)
             {
                 db.closeConnectionManager();
                 return true;

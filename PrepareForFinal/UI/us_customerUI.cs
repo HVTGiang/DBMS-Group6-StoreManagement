@@ -205,20 +205,22 @@ namespace PrepareForFinal.UI
                 try
                 {
                     //Lấy giới tính
-                    int isMale = rb_customerMale.Checked ? 1 : 0;
+                    string isMale = rb_customerMale.Checked ? "1" : "0";
 
-                    dbCustomer.addCustomer(
-                        txt_customerID.Text.Trim(),
-                        txt_customerName.Text.Trim(),
-                        isMale,
-                        dtp_customerBirthdate.Value,
-                        txt_customerAddress.Text.Trim(),
-                        txt_customerPhone.Text.Trim(),
+                    if(dbCustomer.addCustomer(txt_customerID.Text.Trim(), txt_customerName.Text.Trim(), isMale, Convert.ToDateTime(dtp_customerBirthdate.Value),txt_customerAddress.Text.Trim(), txt_customerPhone.Text.Trim(),
                         //Lấy giá trị điểm trong Textbox, nếu textbox không có dữ liệu thì cho nó bằng 0
-                        0);
+                        0) ==true)
+                    {
+                        MessageBox.Show("Thêm khách hàng thành công");
+                        addFlag = false;
 
-                    MessageBox.Show("Thêm khách hàng thành công");
-                    addFlag = false;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thêm khách hàng không thành công");
+                    }
+
+
                     loadData();
                 }
                 catch (Exception ex)
@@ -262,6 +264,10 @@ namespace PrepareForFinal.UI
         private void dtgv_customerList_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             //Lấy vị trí dòng được chọn
+            if (dtgv_customerList.Rows.Count < 1)
+            {
+                return;
+            }
             int index = dtgv_customerList.CurrentCell.RowIndex;
 
             //Load thông tin từ Cell lên các Textbox

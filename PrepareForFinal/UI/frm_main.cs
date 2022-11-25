@@ -22,14 +22,12 @@ namespace PrepareForFinal.UI
         public frm_main()
         {
             InitializeComponent();
-            
         }
 
         private void frm_main_Load(object sender, EventArgs e)
         {
             hideUIItem();
             setRole();
-
         }
 
         public void setRole()
@@ -40,7 +38,13 @@ namespace PrepareForFinal.UI
                 btn_showEmployeeUI.Enabled = false;
                 btn_showAccountUI.Enabled = false;
                 btn_showStatistic.Enabled = false;
-                lblRoleID.Text = tk.eid;
+                String name = tk.name;
+                String[] arr = tk.name.Split(' ');
+                if (arr.Count()>1)
+                {
+                    name = arr[arr.Count() - 1];
+                }
+                lblRoleID.Text = name;
                 lblRoleName.Text = "NV";
 
             }
@@ -49,7 +53,13 @@ namespace PrepareForFinal.UI
                 btn_showEmployeeUI.Enabled = true;
                 btn_showAccountUI.Enabled = true;
                 btn_showStatistic.Enabled = true;
-                lblRoleID.Text = tk.eid;
+                String name = tk.name;
+                String[] arr = tk.name.Split(' ');
+                if (arr.Count() > 1)
+                {
+                    name = arr[arr.Count() - 1];
+                }
+                lblRoleID.Text = name;
                 lblRoleName.Text = "Quản lý";
             }
         }

@@ -134,8 +134,6 @@ namespace PrepareForFinal.BSLayer
                 return "1";
             else
                 return "0";
-
-
         }
 
         public int CountEmployee()

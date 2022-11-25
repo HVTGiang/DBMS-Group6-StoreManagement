@@ -545,9 +545,6 @@
             this.cb_product.FormattingEnabled = true;
             this.cb_product.HoverState.Parent = this.cb_product;
             this.cb_product.ItemHeight = 30;
-            this.cb_product.Items.AddRange(new object[] {
-            "Using",
-            "Deleted"});
             this.cb_product.ItemsAppearance.Parent = this.cb_product;
             this.cb_product.Location = new System.Drawing.Point(944, 67);
             this.cb_product.Name = "cb_product";

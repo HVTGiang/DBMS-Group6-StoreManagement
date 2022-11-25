@@ -47,12 +47,17 @@ namespace PrepareForFinal.UI
                 mainForm.isRole = account.isRole;
                 mainForm.Show();
                 MessageBox.Show("Đăng nhập thành công");
-                
+                this.Reset();
             }
             else
             {
                 MessageBox.Show("Đăng nhập thất bại");
             }
+        }
+        private void Reset()
+        {
+            txt_username.ResetText();
+            txt_password.ResetText();
         }
     }
 }

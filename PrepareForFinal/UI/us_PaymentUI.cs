@@ -181,6 +181,7 @@ namespace PrepareForFinal.UI
             txt_billInitalPay.Text = Math.Round(sum / 10000).ToString();
             EnabledInputControl();
             LoadProductList();
+            txtEmpName.Enabled=false;
             txt_billID.Text = myBill.autoGenerateID();
         }
 
