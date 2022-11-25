@@ -10,7 +10,7 @@ namespace PrepareForFinal.DBLayer
 {
     public class MyData
     {
-        string strConnectionString = "Data Source=OPTI\\KHIEMSQL;" +
+        string strConnectionString = "Data Source=DESKTOP-2UP4IF9\\SQLEXPRESS;" +
             "Initial Catalog=QLCUAHANG;" +
             "Integrated Security=True;" + "MultipleActiveResultsets = true";
 
