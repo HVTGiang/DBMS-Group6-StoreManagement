@@ -205,22 +205,19 @@ namespace PrepareForFinal.UI
                 try
                 {
                     //Lấy giới tính
-                    string isMale = rb_customerMale.Checked ? "1" : "0";
+                    int isMale = rb_customerMale.Checked ? 1 : 0;
 
                     if(dbCustomer.addCustomer(txt_customerID.Text.Trim(), txt_customerName.Text.Trim(), isMale, Convert.ToDateTime(dtp_customerBirthdate.Value),txt_customerAddress.Text.Trim(), txt_customerPhone.Text.Trim(),
                         //Lấy giá trị điểm trong Textbox, nếu textbox không có dữ liệu thì cho nó bằng 0
-                        0) ==true)
+                        0) == true)
                     {
                         MessageBox.Show("Thêm khách hàng thành công");
                         addFlag = false;
-
                     }
                     else
                     {
                         MessageBox.Show("Thêm khách hàng không thành công");
                     }
-
-
                     loadData();
                 }
                 catch (Exception ex)

@@ -22,14 +22,14 @@ namespace PrepareForFinal.BSLayer
 
         public DataSet GetCustomer()
         {
+            db = new MyData();
             return db.ExecuteQueryDataSet("Select * from Customer where c_status = 0", CommandType.Text);
         }
 
-        public bool addCustomer(string cid, string name, string gender, DateTime birth, 
-            string address, string phone, int point)
+        public bool addCustomer(string cid, string name, int gender, DateTime birth, string address, string phone, int point)
         {
+            db = new MyData();
             string queryString = "EXEC usp_AddCustomer @id, @name, @gender, @birth, @address, @phone, @point";
-
             cmd = new SqlCommand(queryString, db.getSqlConn);
             cmd.Parameters.AddWithValue("@id", cid);
             cmd.Parameters.AddWithValue("@name", name);
@@ -38,17 +38,21 @@ namespace PrepareForFinal.BSLayer
             cmd.Parameters.AddWithValue("@address", address);
             cmd.Parameters.AddWithValue("@phone", phone);
             cmd.Parameters.AddWithValue("@point", point);
-            db=new MyData();
+            
             db.openConnectionManager();
-            if(cmd.ExecuteNonQuery() == 1)
+            try
             {
-                db.closeConnectionManager();
+                cmd.ExecuteNonQuery();
                 return true;
             }
-            else
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+            finally
             {
                 db.closeConnectionManager();
-                return false;
             }
         }
 
@@ -68,15 +72,19 @@ namespace PrepareForFinal.BSLayer
             cmd.Parameters.AddWithValue("@status", status);
 
             db.openConnectionManager();
-            if ((cmd.ExecuteNonQuery() == 1))
+            try
             {
-                db.closeConnectionManager();
+                cmd.ExecuteNonQuery();
                 return true;
             }
-            else
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+            finally
             {
                 db.closeConnectionManager();
-                return false;
             }
         }
         
