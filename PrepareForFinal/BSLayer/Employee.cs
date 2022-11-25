@@ -163,5 +163,21 @@ namespace PrepareForFinal.BSLayer
         {
             return db.autoGenerateID("SELECT dbo.[uf_AutoGenerateID]('Employee')");
         }
+
+        public String getEmployeeRole(string eName)
+        {
+            db = new MyData();
+            db.openConnectionManager();
+            cmd = new SqlCommand("Select e_position from Employee where e_name=@eName and e_status=0", db.getSqlConn);
+            cmd.Parameters.AddWithValue("@eName", eName);
+            SqlDataReader DR = cmd.ExecuteReader();
+            String eRole = "";
+            while (DR.Read())
+            {
+                eRole = DR[0].ToString();
+            }
+            db.closeConnectionManager();
+            return eRole;
+        }
     }
 }
