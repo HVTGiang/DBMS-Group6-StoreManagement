@@ -119,6 +119,8 @@ namespace PrepareForFinal.BSLayer
             }
 
         }
+
+
         public String getPositionToDB(ComboBox cb)
         {
             string selectedItem = cb.SelectedItem.ToString();
