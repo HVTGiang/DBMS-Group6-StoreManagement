@@ -67,7 +67,6 @@ namespace PrepareForFinal.UI
                 // Đưa dữ liệu lên DataGridView từ DataTable
                 dgv_product.DataSource = dtProduct;
                 // Thay đổi độ rộng cột 
-
                 int width = dgv_product.Width / 5;
                 dgv_product.AutoResizeColumns();
                 dgv_product.Columns[0].Width = width;
@@ -84,6 +83,7 @@ namespace PrepareForFinal.UI
                 }
 
                 //Hiện thỉ danh sách loại sản phẩm thông qua combobox
+                this.cb_product.Items.Clear();
                 dbProduct.getTypeProduct(this.cb_product);
 
             }
@@ -338,6 +338,11 @@ namespace PrepareForFinal.UI
         }
 
         private void btn_productGroupButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cb_product_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
