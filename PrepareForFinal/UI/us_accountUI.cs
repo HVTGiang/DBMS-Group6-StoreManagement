@@ -256,6 +256,11 @@ namespace PrepareForFinal.UI
                 }
             }
         }
+
+        private void btn_customerInfo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
