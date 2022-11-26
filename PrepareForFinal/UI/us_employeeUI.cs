@@ -190,7 +190,7 @@ namespace PrepareForFinal.UI
                 {
                     dbEmployee.updateEmployee(txt_employeeID.Text.Trim(), txt_employeeName.Text.Trim(), (dbEmployee.ConvertGenderToDB(this.rb_employeeMale,this.rb_employeeFemale)), Convert.ToDateTime(dtp_employeeBirthdate.Value),
                         txt_employeeAddress.Text.Trim(), txt_employeePhone.Text.Trim(), Convert.ToInt32(dbEmployee.getPositionToDB(this.cb_employeeRole)),
-                        Convert.ToDateTime(dtp_employeeHireDate.Value), (float)Convert.ToDouble(num_employeeSalary.Text.Trim()));
+                    Convert.ToDateTime(dtp_employeeHireDate.Value), (float)Convert.ToDouble(num_employeeSalary.Text.Trim()));
                     LoadData();
                 }
                 catch (Exception ex)
@@ -272,7 +272,7 @@ namespace PrepareForFinal.UI
                 this.cb_employeeRole.Text = "Nhân Viên";
             }
 
-            this.num_employeeSalary.Text =dgv_Employee.Rows[r].Cells[5].Value.ToString();
+            this.num_employeeSalary.Value = Int32.Parse(dgv_Employee.Rows[r].Cells[8].Value.ToString());
         }
 
         private void btn_findEmployee_Click(object sender, EventArgs e)
@@ -313,8 +313,7 @@ namespace PrepareForFinal.UI
             try
             {
                 DialogResult traloi;
-                traloi = MessageBox.Show("Xác nhận xóa Nhân Viên?", "Trả lời",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                traloi = MessageBox.Show("Xác nhận xóa Nhân Viên?", "Trả lời", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (traloi == DialogResult.Yes)
                 {
                     dbEmployee.deleteEmployee(this.txt_employeeID.Text);

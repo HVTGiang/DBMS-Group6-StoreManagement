@@ -55,10 +55,10 @@ namespace PrepareForFinal.UI
             btn_accountCancel.Enabled = true;
             txt_accountUsername.Enabled = true;
             txt_accountPassword.Enabled = true;
-            txt_accountEID.Enabled = true;
             cb_accountEName.Enabled = true;
             isAdd = true;
             Bill myBill = new Bill();
+            cb_accountEName.Items.Clear();
             myBill.getEmployeeName(cb_accountEName);
             ResetContent();
         }
@@ -94,7 +94,6 @@ namespace PrepareForFinal.UI
             txt_accountUsername.Enabled = true;
             txt_accountUsername.Enabled = false;
             txt_accountPassword.Enabled = false;
-            txt_accountEID.Enabled = false;
             cb_accountEName.Enabled = false;
 
             isAdd = false;
@@ -111,7 +110,6 @@ namespace PrepareForFinal.UI
             txt_accountUsername.Enabled = true;
             txt_accountUsername.Enabled = false;
             txt_accountPassword.Enabled = false;
-            txt_accountEID.Enabled = false;
             cb_accountEName.Enabled = false;
             cb_accountEName.Items.Clear();
             isAdd = false;
@@ -126,9 +124,9 @@ namespace PrepareForFinal.UI
             btn_accountCancel.Enabled = true;
             txt_accountUsername.Enabled = false;
             txt_accountPassword.Enabled = true;
-            txt_accountEID.Enabled = false;
             cb_accountEName.Enabled = true;
             Bill myBill = new Bill();
+            cb_accountEName.Items.Clear();
             myBill.getEmployeeName(cb_accountEName);
             isAdd = false;
         }

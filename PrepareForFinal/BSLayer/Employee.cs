@@ -79,7 +79,7 @@ namespace PrepareForFinal.BSLayer
             cmd.Parameters.AddWithValue("@id", eid);
 
             db.openConnectionManager();
-            if ((cmd.ExecuteNonQuery() == 1))
+            if ((cmd.ExecuteNonQuery() >= 1))
             {
                 db.closeConnectionManager();
                 return true;

@@ -89,6 +89,8 @@ namespace PrepareForFinal.UI
             dtp_billDate.Value = DateTime.Today;
             txtEmpName.Text = tk.name;
             txtEmpName.Enabled = false;
+            txt_productFindString.Enabled = false;
+            btn_findProduct.Enabled = false;
             ClearItems();
             UnenabledInputControl();
         }
@@ -133,6 +135,8 @@ namespace PrepareForFinal.UI
                             dtgv_billDetialList.DataSource = ToDataTable(temDetail);
                             btn_billDeleteDetail.Enabled = false;
                             btn_billImportDetail.Enabled = false;
+                            txt_productFindString.Enabled = false;
+                            btn_findProduct.Enabled = false;
                             sum = 0;
                         }
                         else
@@ -163,6 +167,8 @@ namespace PrepareForFinal.UI
             dtgv_billDetialList.DataSource = ToDataTable(temDetail);
             btn_billDeleteDetail.Enabled = false;
             btn_billImportDetail.Enabled = false;
+            txt_productFindString.Enabled = false;
+            btn_findProduct.Enabled = false;
             sum = 0;
         }
 
@@ -178,11 +184,14 @@ namespace PrepareForFinal.UI
             myBill.getCustomerName(cb_billCustomerName);
             myBill.getTypeProduct(cb_billTypeName);
             txt_billFinalPay.Text = sum.ToString();
-            txt_billInitalPay.Text = Math.Round(sum / 10000).ToString();
+            txt_billInitalPay.Text = ((int)sum / 10000).ToString();
             EnabledInputControl();
             LoadProductList();
             txtEmpName.Enabled=false;
             txt_billID.Text = myBill.autoGenerateID();
+            txt_billID.Enabled = false;
+            txt_productFindString.Enabled = true;
+            btn_findProduct.Enabled = true;
         }
 
         private void dtgv_billDetialList_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -300,7 +309,7 @@ namespace PrepareForFinal.UI
             txt_billProductPrice.ResetText();
             txt_billTotalPrice.ResetText();
             txt_billFinalPay.Text = sum.ToString();
-            txt_billInitalPay.Text = Math.Round(sum / 10000).ToString();
+            txt_billInitalPay.Text = ((int)sum / 10000).ToString();
             CustomeDetailDataGridView();
 
             /*if (cb_billProductName.Text == "" || num_billProductQuantity.Value.ToString() == "" || txt_billProductPrice.Text == "")
@@ -440,7 +449,7 @@ namespace PrepareForFinal.UI
                 DeleteFromDetailList(temDetail, pName);
                 dtgv_billDetialList.DataSource = ToDataTable(temDetail);
                 txt_billFinalPay.Text = sum.ToString();
-                txt_billInitalPay.Text = Math.Round(sum / 10000).ToString();
+                txt_billInitalPay.Text = ((int)sum / 10000).ToString();
             }
             catch (Exception ex)
             {
