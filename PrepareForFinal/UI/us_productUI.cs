@@ -225,6 +225,8 @@ namespace PrepareForFinal.UI
             dtp_pidate.Enabled = false;
             dtp_pvdate.Enabled = false;
             cb_product.Enabled = false;
+
+            txt_pid.ResetText();
         }
 
         private void dgv_product_CellClick(object sender, DataGridViewCellEventArgs e)
