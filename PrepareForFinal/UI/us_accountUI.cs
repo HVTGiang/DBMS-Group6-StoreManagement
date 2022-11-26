@@ -65,27 +65,15 @@ namespace PrepareForFinal.UI
 
         private void btn_accountSave_Click(object sender, EventArgs e)
         {
-            Account account = new Account();
-            if (isAdd = true)
+            if (isAdd == true)
             {
                 try
                 {
                     Employee employee = new Employee();
-                    if (account.addAccount(txt_accountUsername.Text.Trim(), txt_accountPassword.Text.Trim(), txt_accountEID.Text.Trim()) == true)
+                    if (dbAccount.addAccount(txt_accountUsername.Text.Trim(), txt_accountPassword.Text.Trim(), employee.getEmployeeID(cb_accountEName.Text)) == true)
                     {
-                        MessageBox.Show("Thêm tài khoản thành công");
-                        btn_accountAdd.Enabled = true;
-                        btn_accountUpdate.Enabled = true;
-                        btn_accountSave.Enabled = false;
-                        btn_accountCancel.Enabled = false;
-                        txt_accountUsername.Enabled = true;
-                        txt_accountUsername.Enabled = false;
-                        txt_accountPassword.Enabled = false;
-                        cb_accountEName.Enabled = false;
-
+                        dbAccount.addAccount(txt_accountUsername.Text.Trim(), txt_accountPassword.Text.Trim(), txt_accountEID.Text.Trim());
                         isAdd = false;
-                        ResetContent();
-                        LoadData();
                     }
                     else
                     {
@@ -97,6 +85,40 @@ namespace PrepareForFinal.UI
                     MessageBox.Show("Thêm không được, lỗi: " + ex.Message);
                 }
             }
+            else
+            {
+                try
+                {
+                    Employee employee = new Employee();
+                    if (dbAccount.updateAccount(txt_accountPassword.Text.Trim(), employee.getEmployeeID(cb_accountEName.Text)) == true)
+                    {
+                        dbAccount.updateAccount(txt_accountPassword.Text.Trim(), txt_accountEID.Text.Trim());
+                        isAdd = false;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Đối mật khẩu thành công");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Không đổi được lỗi, lỗi: " + ex.Message);
+                }
+
+            }
+            btn_accountAdd.Enabled = true;
+            btn_accountUpdate.Enabled = true;
+            btn_accountSave.Enabled = false;
+            btn_accountCancel.Enabled = false;
+            txt_accountUsername.Enabled = true;
+            txt_accountUsername.Enabled = false;
+            txt_accountPassword.Enabled = false;
+            txt_accountEID.Enabled = false;
+            cb_accountEName.Enabled = false;
+
+            isAdd = false;
+            ResetContent();
+            LoadData();
         }
 
         private void btn_accountCancel_Click(object sender, EventArgs e)
@@ -204,11 +226,9 @@ namespace PrepareForFinal.UI
                 try
                 {
                     myDataTable = new DataTable();
-                    myAccountDataSet = new DataSet();
-                    // Lấy data đưa vào dataset
-                    //myAccountDataSet = account.findAccount(txt_findAccount.Text.Trim());
-                    // Đưa dữ liệu từ dataset vào table
-                    myDataTable = myAccountDataSet.Tables[0];
+                    myDataTable.Clear();
+                    myDataTable = dbAccount.findAccount(txt_findAccount.Text).Tables[0];
+
                     // Đổ data vào datagridview
                     dtgv_accountList.DataSource = myDataTable;
                     // Tùy chỉnh giao diện cho cái list

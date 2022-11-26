@@ -107,23 +107,15 @@ namespace PrepareForFinal.BSLayer
             }
         }
 
-        public bool updateAccount(string id, string name, string gender, DateTime date, string address, string phone,
-            int position, DateTime hireDate, float salary)
+
+        public bool updateAccount(string password, string eid)
         {
-
-            cmd = new SqlCommand("EXEC usp_UpdateEmployee @id, @name, @gender, @date, @address, @phone, @position, @hireDate,@salary", db.getSqlConn);
-            cmd.Parameters.AddWithValue("@id", id);
-            cmd.Parameters.AddWithValue("@name", name);
-            cmd.Parameters.AddWithValue("@gender", gender);
-            cmd.Parameters.AddWithValue("@date", date);
-            cmd.Parameters.AddWithValue("@address", address);
-            cmd.Parameters.AddWithValue("@phone", phone);
-            cmd.Parameters.AddWithValue("@position", position);
-            cmd.Parameters.AddWithValue("@hireDate", hireDate);
-            cmd.Parameters.AddWithValue("@salary", salary);
-
+            db = new MyData();
+            cmd = new SqlCommand("EXEC usp_UpdateAccount @password, @eid", db.getSqlConn);
+            cmd.Parameters.AddWithValue("@password", password);
+            cmd.Parameters.AddWithValue("@eid", eid);
             db.openConnectionManager();
-            if ((cmd.ExecuteNonQuery() == 1))
+            if ((cmd.ExecuteNonQuery() >= 1))
             {
                 db.closeConnectionManager();
                 return true;
@@ -133,7 +125,6 @@ namespace PrepareForFinal.BSLayer
                 db.closeConnectionManager();
                 return false;
             }
-
         }
 
 

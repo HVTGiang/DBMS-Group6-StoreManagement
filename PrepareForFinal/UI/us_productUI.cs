@@ -112,6 +112,7 @@ namespace PrepareForFinal.UI
             btn_pfind.Enabled = true;
             btn_cancel.Enabled = false;
             btn_save.Enabled = false;
+            btn_productImport.Enabled = false;
         }
 
         
@@ -163,6 +164,7 @@ namespace PrepareForFinal.UI
             dtp_pidate.Enabled = true;
             dtp_pvdate.Enabled = true;
             cb_product.Enabled = true;
+            btn_productImport.Enabled = true;
         }
 
         private void btn_productSave_Click(object sender, EventArgs e)
@@ -347,6 +349,41 @@ namespace PrepareForFinal.UI
         private void cb_product_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_productImport_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                double count;
+                if (!double.TryParse(txt_productImport.Text, out count))
+                {
+                    MessageBox.Show("Nội dung nhập vào không hợp lệ");
+                }
+                else
+                {
+                    num_pquantity.Value = (decimal)count + num_pquantity.Value;
+                }
+
+
+                FileStream fs = new FileStream(imgLoc, FileMode.Open, FileAccess.Read);
+                byte[] img = new byte[fs.Length];
+                fs.Read(img, 0, Convert.ToInt32(fs.Length));
+                dbProduct.updateProduct(txt_pid.Text.Trim(), Convert.ToDateTime(dtp_pidate.Value), Convert.ToDateTime(dtp_pvdate.Value), txt_pname.Text.Trim(), img, (float)Convert.ToDouble(num_pprice.Text.Trim()), (float)Convert.ToDouble(num_pquantity.Text.Trim()), dbProduct.getTypeProductID(this.cb_product));
+                LoadData();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            btn_save.Enabled = false;
+            btn_cancel.Enabled = false;
+            btn_padd.Enabled = true;
+            btn_pupdate.Enabled = true;
+            txt_pid.Enabled = true;
+            txt_productImport.ResetText();
         }
     }
 }
