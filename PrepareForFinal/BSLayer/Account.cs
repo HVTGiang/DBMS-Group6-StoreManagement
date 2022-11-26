@@ -91,15 +91,19 @@ namespace PrepareForFinal.BSLayer
             cmd.Parameters.AddWithValue("@password", password);
             cmd.Parameters.AddWithValue("@eid", eid);
             db.openConnectionManager();
-            if ((cmd.ExecuteNonQuery() >= 1))
+            try
             {
-                db.closeConnectionManager();
+                cmd.ExecuteNonQuery();
                 return true;
             }
-            else
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+            finally
             {
                 db.closeConnectionManager();
-                return false;
             }
         }
 

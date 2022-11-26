@@ -71,10 +71,21 @@ namespace PrepareForFinal.UI
                 try
                 {
                     Employee employee = new Employee();
-                    if (account.addAccount(txt_accountUsername.Text.Trim(), txt_accountPassword.Text.Trim(), employee.getEmployeeID(cb_accountEName.Text)) == true)
+                    if (account.addAccount(txt_accountUsername.Text.Trim(), txt_accountPassword.Text.Trim(), txt_accountEID.Text.Trim()) == true)
                     {
-                        dbAccount.addAccount(txt_accountUsername.Text.Trim(), txt_accountPassword.Text.Trim(), txt_accountEID.Text.Trim());
-                        
+                        MessageBox.Show("Thêm tài khoản thành công");
+                        btn_accountAdd.Enabled = true;
+                        btn_accountUpdate.Enabled = true;
+                        btn_accountSave.Enabled = false;
+                        btn_accountCancel.Enabled = false;
+                        txt_accountUsername.Enabled = true;
+                        txt_accountUsername.Enabled = false;
+                        txt_accountPassword.Enabled = false;
+                        cb_accountEName.Enabled = false;
+
+                        isAdd = false;
+                        ResetContent();
+                        LoadData();
                     }
                     else
                     {
@@ -86,19 +97,6 @@ namespace PrepareForFinal.UI
                     MessageBox.Show("Thêm không được, lỗi: " + ex.Message);
                 }
             }
-            MessageBox.Show("Thêm tài khoản thành công");
-            btn_accountAdd.Enabled = true;
-            btn_accountUpdate.Enabled = true;
-            btn_accountSave.Enabled = false;
-            btn_accountCancel.Enabled = false;
-            txt_accountUsername.Enabled = true;
-            txt_accountUsername.Enabled = false;
-            txt_accountPassword.Enabled = false;
-            cb_accountEName.Enabled = false;
-
-            isAdd = false;
-            ResetContent();
-            LoadData();
         }
 
         private void btn_accountCancel_Click(object sender, EventArgs e)
@@ -262,6 +260,11 @@ namespace PrepareForFinal.UI
         private void btn_customerInfo_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_reload_Click(object sender, EventArgs e)
+        {
+            LoadData();
         }
     }
 }
