@@ -122,10 +122,10 @@ namespace PrepareForFinal.UI
             btn_accountCancel.Enabled = true;
             txt_accountUsername.Enabled = false;
             txt_accountPassword.Enabled = true;
-            cb_accountEName.Enabled = true;
-            Bill myBill = new Bill();
+            cb_accountEName.Enabled = false;
+            /*Bill myBill = new Bill();
             cb_accountEName.Items.Clear();
-            myBill.getEmployeeName(cb_accountEName);
+            myBill.getEmployeeName(cb_accountEName);*/
             isAdd = false;
         }
         private void CustomeAccountDataGridView()

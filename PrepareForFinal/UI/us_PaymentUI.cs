@@ -69,6 +69,7 @@ namespace PrepareForFinal.UI
             txt_billInitalPay.Clear();
             txt_customerPoint.Clear();
             num_billProductQuantity.Value = 1;
+            txt_productName.Clear();
         }
         private void btn_billShowList_Click(object sender, EventArgs e)
         {
@@ -91,6 +92,11 @@ namespace PrepareForFinal.UI
             txtEmpName.Enabled = false;
             txt_productFindString.Enabled = false;
             btn_findProduct.Enabled = false;
+            btn_billAdd.Enabled = true;
+            if (dtgv_productList.Rows.Count >=1)
+            {
+                dtgv_productList.DataSource = null;
+            }
             ClearItems();
             UnenabledInputControl();
         }
