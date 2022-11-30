@@ -369,6 +369,11 @@
             0,
             0,
             0});
+            this.num_pquantity.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            -2147483648});
             this.num_pquantity.Name = "num_pquantity";
             this.num_pquantity.ShadowDecoration.Parent = this.num_pquantity;
             this.num_pquantity.Size = new System.Drawing.Size(106, 36);

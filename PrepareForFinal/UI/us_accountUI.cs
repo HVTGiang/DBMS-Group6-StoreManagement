@@ -72,7 +72,6 @@ namespace PrepareForFinal.UI
                     Employee employee = new Employee();
                     if (dbAccount.addAccount(txt_accountUsername.Text.Trim(), txt_accountPassword.Text.Trim(), employee.getEmployeeID(cb_accountEName.Text)) == true)
                     {
-                        dbAccount.addAccount(txt_accountUsername.Text.Trim(), txt_accountPassword.Text.Trim(), txt_accountEID.Text.Trim());
                         isAdd = false;
                     }
                     else
@@ -92,7 +91,6 @@ namespace PrepareForFinal.UI
                     Employee employee = new Employee();
                     if (dbAccount.updateAccount(txt_accountPassword.Text.Trim(), employee.getEmployeeID(cb_accountEName.Text)) == true)
                     {
-                        dbAccount.updateAccount(txt_accountPassword.Text.Trim(), txt_accountEID.Text.Trim());
                         isAdd = false;
                     }
                     else
@@ -197,7 +195,7 @@ namespace PrepareForFinal.UI
             }
             int row = dtgv_accountList.CurrentCell.RowIndex;
 
-            btn_accountDelete.Enabled = true;
+            btn_accountDelete.Enabled = false;
 
             // Lấy thông tin từ list đưa lên textbox
             txt_accountUsername.Text = dtgv_accountList.Rows[row].Cells[0].Value.ToString();

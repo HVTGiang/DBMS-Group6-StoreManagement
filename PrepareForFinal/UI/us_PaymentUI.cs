@@ -93,10 +93,16 @@ namespace PrepareForFinal.UI
             txt_productFindString.Enabled = false;
             btn_findProduct.Enabled = false;
             btn_billAdd.Enabled = true;
+            if (dtgv_billDetialList.Rows.Count >= 1)
+            {
+                temDetail.Clear();
+                dtgv_billDetialList.DataSource = null;
+            }
             if (dtgv_productList.Rows.Count >=1)
             {
                 dtgv_productList.DataSource = null;
             }
+            sum = 0;
             ClearItems();
             UnenabledInputControl();
         }
@@ -120,35 +126,61 @@ namespace PrepareForFinal.UI
                     }
                     else
                     {
-                        if (myBill.addBill(txt_billID.Text.Trim(), Convert.ToDateTime(dtp_billDate.Value), (float)0, eid, cid) == true)
+                        if (temDetail.Count < 1)
                         {
-                            foreach (TemDetail detail in temDetail)
-                            {
-                                if (myDetail.addDetail(detail.amount, txt_billID.Text, myDetail.getProductID(detail.pname)) == false)
-                                {
-                                    MessageBox.Show("Thêm hóa đơn không thành công");
-                                    return;
-                                }
-                            }
-                            MessageBox.Show("Thêm hóa đơn thành công");
-                            btn_billAdd.Enabled = true;
-                            btn_billSave.Enabled = false;
-                            btn_billCancel.Enabled = false;
-                            ClearItems();
-                            UnenabledInputControl();
-                            prDataTable.Clear();
-                            temDetail.Clear();
-                            dtgv_billDetialList.DataSource = ToDataTable(temDetail);
-                            btn_billDeleteDetail.Enabled = false;
-                            btn_billImportDetail.Enabled = false;
-                            txt_productFindString.Enabled = false;
-                            btn_findProduct.Enabled = false;
-                            sum = 0;
+                            MessageBox.Show("Vui lòng chọn sản phẩm");
                         }
                         else
                         {
-                            MessageBox.Show("Thêm hóa đơn không thành công");
-                        }
+                            if (myBill.addBill(txt_billID.Text.Trim(), Convert.ToDateTime(dtp_billDate.Value), (float)0, eid, cid) == true)
+                            {
+                                foreach (TemDetail detail in temDetail)
+                                {
+                                    myProduct=new Product();
+                                    if(myProduct.getAmount(myDetail.getProductID(detail.pname)) >= detail.amount)
+                                    {
+                                        if (myDetail.addDetail(detail.amount, txt_billID.Text, myDetail.getProductID(detail.pname)) == false)
+                                        {
+                                            MessageBox.Show("Thêm hóa đơn không thành công");
+                                            return;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        DialogResult traloi;
+                                        traloi = MessageBox.Show("Không đủ hàng có sẵn! Tiếp tục?", "Trả lời",
+                                        MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                                        if (traloi == DialogResult.Yes)
+                                        {
+                                            myDetail.addDetail(detail.amount, txt_billID.Text, myDetail.getProductID(detail.pname));
+                                        }
+                                        else
+                                        {
+                                            MessageBox.Show("Không thực hiện!");
+                                            continue;
+                                        }
+                                    }
+                                }
+                                MessageBox.Show("Thêm hóa đơn thành công");
+                                btn_billAdd.Enabled = true;
+                                btn_billSave.Enabled = false;
+                                btn_billCancel.Enabled = false;
+                                ClearItems();
+                                UnenabledInputControl();
+                                prDataTable.Clear();
+                                temDetail.Clear();
+                                dtgv_billDetialList.DataSource = ToDataTable(temDetail);
+                                btn_billDeleteDetail.Enabled = false;
+                                btn_billImportDetail.Enabled = false;
+                                txt_productFindString.Enabled = false;
+                                btn_findProduct.Enabled = false;
+                                sum = 0;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Thêm hóa đơn không thành công");
+                            }
+                        } 
                     }
                     
                 }

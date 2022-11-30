@@ -99,7 +99,7 @@ namespace PrepareForFinal.BSLayer
             cmd.Parameters.AddWithValue("@pid", pid);
             
             db.openConnectionManager();
-            if ((cmd.ExecuteNonQuery() == 1))
+            if ((cmd.ExecuteNonQuery() >= 1))
             {
                 db.closeConnectionManager();
                 return true;

@@ -176,6 +176,23 @@ namespace PrepareForFinal.BSLayer
             db.closeConnectionManager();
             return tid;
         }
+
+        public int getAmount(string pID)
+        {
+            db = new MyData();
+            db.openConnectionManager();
+            cmd = new SqlCommand("Select p_quantity from Product where p_id=@pID and p_status=0", db.getSqlConn);
+            cmd.Parameters.AddWithValue("@pID", pID);
+            SqlDataReader DR = cmd.ExecuteReader();
+            int tid = 0;
+            while (DR.Read())
+            {
+                tid = Int32.Parse(DR[0].ToString());
+            }
+            db.closeConnectionManager();
+            return tid;
+        }
+
         public String autoGenerateID()
         {
             return db.autoGenerateID("SELECT dbo.[uf_AutoGenerateID]('Product')");

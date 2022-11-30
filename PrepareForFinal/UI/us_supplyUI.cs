@@ -122,7 +122,6 @@ namespace PrepareForFinal.UI
             this.txt_supplyName.Enabled = true;
             this.txt_supplyPhone.Enabled = true;
             this.cb_nameProduct.Enabled = false;
-            this.cb_nameProduct.ResetText();
             Flag = false;
         }
 
@@ -151,12 +150,12 @@ namespace PrepareForFinal.UI
                 {
                     dbSupply.updateSupply(txt_supplyID.Text.Trim(), txt_supplyName.Text.Trim(), txt_supplyAddress.Text.Trim(),
                         txt_supplyPhone.Text.Trim(), dbSupply.getProductID(this.cb_nameProduct));
+                    Flag = false;
                     LoadData();
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
-
                 }
             }
 

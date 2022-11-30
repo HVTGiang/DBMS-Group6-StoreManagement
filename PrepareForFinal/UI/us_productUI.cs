@@ -207,7 +207,7 @@ namespace PrepareForFinal.UI
             btn_cancel.Enabled = false;
             btn_padd.Enabled = true;
             btn_pupdate.Enabled = true;
-            txt_pid.Enabled = true;
+            txt_pid.Enabled = false;
         }
 
         private void btn_productCancel_Click(object sender, EventArgs e)
@@ -248,7 +248,6 @@ namespace PrepareForFinal.UI
             DataRow row = dtProduct.Rows[r];
             ptb_pimage.Image = ConvertByteArraytoImage((byte[])row[4]);
             ptb_pimage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-
             dbProduct.displayTypeProduct(cb_product, txt_pname.Text);
         }
 
@@ -382,7 +381,7 @@ namespace PrepareForFinal.UI
             btn_cancel.Enabled = false;
             btn_padd.Enabled = true;
             btn_pupdate.Enabled = true;
-            txt_pid.Enabled = true;
+            txt_pid.Enabled = false;
             txt_productImport.ResetText();
         }
     }

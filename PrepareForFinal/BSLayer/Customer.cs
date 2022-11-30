@@ -59,7 +59,7 @@ namespace PrepareForFinal.BSLayer
         public bool updateCustomer(string cid, string name, int gender, DateTime birth,
             string address, string phone, int point, int status)
         {
-            string queryString = "EXEC usp_UpdateCustomer @cid, @name, @gender, @birth, @address, @phone, @point, @status";
+            string queryString = "EXEC usp_UpdateCustomer @cid, @name, @gender, @birth, @address, @phone, @point";
 
             cmd = new SqlCommand(queryString, db.getSqlConn);
             cmd.Parameters.AddWithValue("@cid", cid);
